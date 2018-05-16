@@ -1,3 +1,8 @@
+# Source .bashrc just in case
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi
+
 # Put Git Branch in Bash Prompt
 source '/Users/andreaegan/.git-prompt.sh'
 
@@ -49,3 +54,15 @@ export DOCKER_CERT_PATH=/Users/andreaegan/.docker/machine/machines/default
 
 # Configure fonts for octave
 export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
+
+# Setup Sublime shortcut
+export PATH=/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
+export EDITOR='subl -w'
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+
+# Shortcut to set AWS_PROFILE correctly
+alias awscreds='export AWS_PROFILE=<full name of your aws account>'
+
+# Because docker-compose is really long.
+alias dc='docker-compose'
