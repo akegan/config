@@ -1,4 +1,3 @@
-
 # Source .bashrc just in case
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc
