@@ -3,6 +3,7 @@ if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
 
+
 # Put Git Branch in Bash Prompt
 source '/Users/andreaegan/.git-prompt.sh'
 
@@ -18,6 +19,14 @@ alias ddev='pub run dart_dev'
 
 # export PATH=$ JAVA_HOME /bin:$PATH
 export PATH="/usr/local/sbin:$PATH"
+
+# Setup nvm paths
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
+# Setup rbenv
+eval "$(rbenv init -)"
 
 # virtualenvwrapper
 # Don't let Mac python (in /usr/bin) supercede brew's python (/usr/local/bin)
